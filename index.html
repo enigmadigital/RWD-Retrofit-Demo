@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Demo - RWD Retrofit</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="/css/desktop.min.css" rel="stylesheet" type="text/css" media="all and (min-width: 990px)" class="rwdretrofit-desktop" data-breakpoint-width="768" />	
+	<link href="/css/rwd.min.css" rel="stylesheet" type="text/css" media="all and (max-width: 989px)" class="rwdretrofit-mobile" />
+	<!--[if lt IE 9 ]>
+		<link href="/css/desktop.min.css" rel="stylesheet" type="text/css" media="all" />
+	<![endif]-->
+	<!-- unminified versions: /css/desktop.css & /css/rwd.css -->
+	<script>
+		// IE 10 on WP8 viewport fix: http://mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html
+		(function() {
+			if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+				var msViewportStyle = document.createElement("style");
+				msViewportStyle.appendChild(
+					document.createTextNode("@-ms-viewport{width:auto!important}")
+				);
+				document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+			}
+		})();
+	</script>
+	<script src="/js/base.min.js"></script>
+	<!-- contains: /js/rwd.retrofit.min.js, /js/modernizr.min.js, /js/supports.touch.min.js -->
+	<!-- unminified versions: /js/rwd.retrofit.js, /js/modernizr.js, /js/supports.touch.js -->
+</head>
+<body>
+
+	<div id="site">
+		<div id="header">
+			<a href="#" id="logo"><img src="/images/logo.png" width="130" height="82" alt="RWD Retrofit Demo Site" /></a>
+			<p id="phone">Phone: 09 9999 9999</p>
+		</div>
+		
+		<div id="nav">
+			<ul class="reset menu">
+				<li class="current"><a href="#"><span>Home</span></a></li>
+				<li><a href="#"><span>Products</span></a></li>
+				<li><a href="#"><span>Latest News</span></a></li>
+				<li><a href="#"><span>Blog</span></a></li>
+				<li><a href="#"><span>FAQs</span></a></li>
+				<li><a href="#"><span>About us</span></a></li>
+				<li><a href="#"><span>Contact us</span></a></li>
+			</ul>
+		</div>
+		
+		<div id="content">
+			<div id="col_1">
+			
+				<div id="feature" data-interval="5">
+					<div class="inner">
+						<ul class="reset slider">
+							<li><a href="#"><img src="/images/promo-1.png" width="610" height="322" alt="Promo 1" /></a></li>
+							<li><a href="#"><img src="/images/promo-2.png" width="610" height="322" alt="Promo 2" /></a></li>
+						</ul>
+					</div>
+				</div>
+			
+				<h1>Welcome to the RWD Retrofit demo site</h1>
+				
+				<p>Its purpose is to demo how you can successfully retrofit an existing site (including ones built using old-skool images for everything) to have a modern, responsive version for smaller screens.</p>
+				
+				<p>When used in conjunction with our RWD Retrofit plugin, you can force the original &ldquo;desktop&rdquo; site on to large tablets (should you wish).</p>
+				
+				<p>View the unminified versions of the CSS and JavaScript to see how it's accomplished and read the article on Smashing Mag for more info.</p>
+				
+				<p>Ipsum filler: In aliquet convallis bibendum. Sed vehicula scelerisque sem ac lacinia. Ut adipiscing, diam vel condimentum sodales, lacus felis aliquam felis, sit amet porttitor mi libero vel nulla. Etiam quis lorem purus. Quisque vel porta lectus.</p>
+
+				<p>Maecenas pretium purus sit amet neque fermentum lobortis. Vivamus sed viverra neque. In quis egestas ipsum. Aliquam erat volutpat. Nulla est elit, convallis quis lacinia quis, suscipit congue risus.</p>
+			</div>
+			
+			<div id="col_2">
+				
+				<div id="gallery">
+					<h2>Image Gallery</h2>
+					<p>On &ldquo;desktop&rdquo;, this opens Colorbox, but on mobile just links to the images. You could also load a gallery page on mobile.</p>
+					<ul class="reset">
+						<li><a href="/images/gallery-1.jpg" class="lightbox" rel="gallery"><img src="/images/gallery-thumb-1.jpg" width="80" height="60" alt="Gallery 1" /></a></li>
+						<li><a href="/images/gallery-2.jpg" class="lightbox" rel="gallery"><img src="/images/gallery-thumb-2.jpg" width="80" height="60" alt="Gallery 2" /></a></li>
+						<li><a href="/images/gallery-3.jpg" class="lightbox" rel="gallery"><img src="/images/gallery-thumb-3.jpg" width="80" height="60" alt="Gallery 3" /></a></li>
+						<li><a href="/images/gallery-4.jpg" class="lightbox" rel="gallery"><img src="/images/gallery-thumb-4.jpg" width="80" height="60" alt="Gallery 4" /></a></li>
+						<li><a href="/images/gallery-5.jpg" class="lightbox" rel="gallery"><img src="/images/gallery-thumb-5.jpg" width="80" height="60" alt="Gallery 5" /></a></li>
+						<li><a href="/images/gallery-6.jpg" class="lightbox" rel="gallery"><img src="/images/gallery-thumb-6.jpg" width="80" height="60" alt="Gallery 6" /></a></li>
+						<li><a href="/images/gallery-7.jpg" class="lightbox" rel="gallery"><img src="/images/gallery-thumb-7.jpg" width="80" height="60" alt="Gallery 7" /></a></li>
+						<li><a href="/images/gallery-8.jpg" class="lightbox" rel="gallery"><img src="/images/gallery-thumb-8.jpg" width="80" height="60" alt="Gallery 8" /></a></li>
+						<li><a href="/images/gallery-9.jpg" class="lightbox" rel="gallery"><img src="/images/gallery-thumb-9.jpg" width="80" height="60" alt="Gallery 9" /></a></li>
+					</ul>
+				</div>
+				
+				<div id="news">
+					<ul class="reset menu tabs">
+						<li><a href="#tab-news" class="current">News</a></li>
+						<li><a href="#tab-blog">Blog posts</a></li>
+					</ul>
+					<div class="panes">
+						<div class="pane" id="tab-news">
+							<ul class="reset">
+								<li>
+									<p class="date">Friday 01 February</p>
+									<h3><a href="#">News Headline 1</a></h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lorem lacus, varius sit amet venenatis luctus, volutpat ut risus.</p>
+								</li>
+								<li>
+									<p class="date">Thursday 24 January</p>
+									<h3><a href="#">News Headline 2</a></h3>
+									<p>Duis ullamcorper dignissim libero, ut malesuada arcu fringilla a. Donec varius tristique velit quis pretium. Mauris lobortis, nisi ac gravida luctus, velit turpis placerat metus, ut laoreet lectus libero in dui. Integer nec sagittis turpis.</p>
+								</li>
+							</ul>
+						</div>
+						<div class="pane" id="tab-blog">
+							<ul class="reset">
+								<li>
+									<p class="date">Monday 31 December</p>
+									<h3><a href="#">Blog Title 1</a></h3>
+									<p>Nullam congue metus non ipsum malesuada adipiscing. Aenean vitae elit a elit consectetur rutrum. Etiam vitae diam diam, non facilisis risus.</p>
+								</li>
+								<li>
+									<p class="date">Saturday 17 November</p>
+									<h3><a href="#">Blog Title 2</a></h3>
+									<p>Mauris mollis egestas molestie. Morbi lobortis, quam id posuere posuere, felis nulla volutpat eros, a gravida nibh dolor eu arcu. Aenean venenatis pulvinar ligula sit amet facilisis.</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div id="footer">
+			<p>Copyright 2013 <a href="http://mattstow.com">Matt Stow</a> and <a href="http://izilla.com.au">Izilla</a></p>
+			<p><a href="https://github.com/izilla/RWD-Retrofit">Download RWD Retrofit</a></p>
+		</div>
+	</div>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/js/jquery-1.8.2.min.js"><\/script>')</script>
+	<script src="/js/all.min.js"></script>
+	<!-- contains: /js/matchMedia.min.js, /js/enquire.min.js, /js/main.min.js -->
+	<!-- unminified versions: /js/matchMedia.js, /js/enquire.js, /js/main.js -->
+</body>
+</html>
