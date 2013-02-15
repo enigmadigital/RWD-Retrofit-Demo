@@ -1,3 +1,5 @@
+(function() {
+
 $(document).ready(function() {
 	// Set up the toggle nav
 	nav.setup();
@@ -144,8 +146,8 @@ var feature = {
 				// Add the previous and next links
 				$featureParent.append($navPrev).append($navNext);
 				
-				// If the browser supports CSS Transforms use swipeJS
-				if (Modernizr.csstransforms) {
+				// If the browser supports CSS Transforms use swipeJS, except for IE9
+				if (Modernizr.csstransforms && !(layoutEngine.vendor === 'ie' && layoutEngine.version === 9)) {
 					Modernizr.load({
 						load: '/js/swipe.js',
 						// On load of swipe
@@ -238,3 +240,5 @@ var feature = {
 		}
 	}
 };
+
+})();
