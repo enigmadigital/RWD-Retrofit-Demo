@@ -561,6 +561,14 @@ ul > li:before {
 	position: relative;
 }
 
+.js .pane {
+	display: none;
+}
+
+.js .pane:first-child {
+	display: block;
+}
+
 .panes:before, .panes:after {
 	background: url(/images/panes-before_after.png);
 	content: '';
